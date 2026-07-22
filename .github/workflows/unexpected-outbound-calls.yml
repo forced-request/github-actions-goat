@@ -1,6 +1,7 @@
 name: Unexpected Outbound Calls
 on:
   workflow_dispatch:
+permissions: read-all
 jobs:
   unexpected-outbound-calls:
     name: UnexpectedOutboundCalls
