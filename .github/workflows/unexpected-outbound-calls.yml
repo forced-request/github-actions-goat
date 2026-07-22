@@ -6,6 +6,8 @@ jobs:
   unexpected-outbound-calls:
     name: UnexpectedOutboundCalls
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - run: "curl https://attacker.com -L  || true"
       - run: "curl https://google.com -L  || true"
